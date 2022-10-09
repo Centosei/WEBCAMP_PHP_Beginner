@@ -6,5 +6,5 @@ function h(string $s): string
 {
     return htmlspecialchars($s, ENT_QUOTES);
 }
-$input = $_GET['input_text'] ?? "";
-echo "あなたが入力したのは ", h($input), " ですね？\n";
+$input = $_GET['input_text'] ?? "ERROR:[ユーザからの入力がありません]";
+echo "あなたが入力したのは '", h($input), "' ですね？\n";
