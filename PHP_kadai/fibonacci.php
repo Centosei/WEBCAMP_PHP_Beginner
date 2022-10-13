@@ -10,18 +10,15 @@ class Fibonacci
     
     public function exec()
     {
-        if ($this->max >= 0) {
-            for (print ($second_last = 0) . "\n" . ($first_last = 1) . "\n"; $first_last <= $this->max;)
-            {
-                // 
-                $sum = $second_last + $first_last;
-                echo $sum."\n";
-                // 
-                $second_last = $first_last;
-                $first_last = $sum;
-            }
-        } else {
-            echo 0 . "\n";
+        echo 0 . "\n" . 1 . "\n";
+        for ($second_last = 0, $first_last = 1; $first_last <= $this->max;)
+        {
+            // 
+            $sum = $second_last + $first_last;
+            echo $sum."\n";
+            // 
+            $second_last = $first_last;
+            $first_last = $sum;
         }
     }
 }
